@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Starbucks</title>
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#" class="logo"
+          ><img src="assets/images/logo.png" alt="logo_star"
+        /></a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+          <li><a>Home</a></li>
+          <li><a>Menu</a></li>
+          <li><a>What's New</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>
+            It's not just Coffee<br />It's
+            <span class="star_color">Starbucks</span>
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
+            ex quos autem. Dolor consequatur adipisci harum, nihil fugiat magnam
+            laudantium fugit est officiis eveniet asperiores quod voluptates
+            corporis quaerat atque.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img
+            src="assets/images/img1.png"
+            alt="1erStarbucks"
+            class="starbucks"
+          />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="assets/images/thumb1.png"
+            alt="thumb1"
+            onclick="imgSlide('assets/images/img1.png'); changeColor('#017143')"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/images/thumb2.png"
+            alt="thumb2"
+            onclick="imgSlide('assets/images/img2.png'); changeColor('#eb7495')"
+          />
+        </li>
+        <li>
+          <img
+            src="assets/images/thumb3.png"
+            alt="thumb3"
+            onclick="imgSlide('assets/images/img3.png'); changeColor('#d752b1')"
+          />
+        </li>
+      </ul>
+      <ul class="social">
+        <li>
+          <a href="#"><img src="assets/images/facebook.png" alt="thumb1" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="assets/images/twitter.png" alt="thumb2" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="assets/images/instagram.png" alt="thumb3" /></a>
+        </li>
+      </ul>
+    </section>
+  </body>
+  <script type="text/javascript">
+    function imgSlide(cup) {
+      document.querySelector(".starbucks").src = cup;
+    }
+    function changeColor(color) {
+      if (window.matchMedia("(min-width: 991px)").matches) {
+        circle = document.querySelector(".circle");
+        star = document.querySelector(".star_color");
+        circle.style.background = color;
+        star.style.color = color;
+      }
+    }
+    function toggleMenu() {
+      menuToggle = document.querySelector(".toggle");
+      nav = document.querySelector(".navigation");
+      menuToggle.classList.toggle("active");
+      nav.classList.toggle("active");
+    }
+  </script>
+</html>
