@@ -86,11 +86,11 @@
     }
     function changeColor(color) {
       if (window.matchMedia("(min-width: 991px)").matches) {
-        circle = document.querySelector(".circle");
         star = document.querySelector(".star_color");
-        circle.style.background = color;
         star.style.color = color;
       }
+      circle = document.querySelector(".circle");
+      circle.style.background = color;
     }
     function toggleMenu() {
       menuToggle = document.querySelector(".toggle");
